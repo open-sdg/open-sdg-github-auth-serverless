@@ -2,7 +2,7 @@
   "version": 2,
   "headers": [
     {
-      "source": "/api/auth/(.*)",
+      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -13,11 +13,7 @@
   ],
   "rewrites": [
     {
-      "source": "/api/auth/getAccessToken",
-      "destination": "/api/auth.js"
-    },
-    {
-      "source": "/api/auth",
+      "source": "/getAccessToken",
       "destination": "/api/auth.js"
     }
   ]
